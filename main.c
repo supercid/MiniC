@@ -2,15 +2,16 @@
 #include "minic.h"
 
 int main(int argc, char const *argv[]){
-	// Testing my_strlen
-	int j;
-	j =	my_strlen("asdasdasdt");
-	printf("%d\n", j);
+	
+	if (argc == 2){
+		int strSize = my_strlen(argv[1]);
+		printf("%d\n", strSize);
+	}
 
-	// Testing my_strcmp
-	int k;
-	k = my_strcmp("ab", "abc");
-	printf("%d\n", k);
+	if (argc == 3){
+		int str = my_strcmp(argv[1], argv[2]);
+		printf("%d\n", str);
+	}
 	
 	return 0;
 }
